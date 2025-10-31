@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    background-color: #FC4308;
+    border-radius: 50%;
+}

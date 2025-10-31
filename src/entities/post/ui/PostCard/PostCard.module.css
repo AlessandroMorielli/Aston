@@ -1,0 +1,6 @@
+.post {
+    width: 100px;
+    height: 100px;
+    box-shadow: gray;
+    border: 1px solid green;
+}
