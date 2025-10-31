@@ -1,0 +1,12 @@
+.theme__button {
+    height: 100%;
+    border: none;
+    background-color: inherit;
+    padding: 5px;
+    cursor: pointer;
+}
+
+img {
+    width: inherit;
+    height: inherit;
+}
