@@ -1,0 +1,10 @@
+ul {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+li:hover {
+    background-color: #F5F5F5;
+}
