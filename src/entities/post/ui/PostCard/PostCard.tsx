@@ -1,10 +1,20 @@
 import styles from './PostCard.module.css'
+import {useState} from "react";
+import CommentsList from "../../../../widgets/CommentList/CommentsList";
 
-function PostCard({post}) {
+function PostCard({postId, post}) {
+    const [showComments, setShowComments] = useState<boolean>(false)
+
+    function handleClick() {
+        setShowComments((prev) => !prev)
+    }
+
     return (
-        <a href='#'>
-            <div className={styles.post}>{post}</div>
-        </a>
+        <div className={styles.post} >
+            <div className={styles.post__content}>{post}</div>
+            <div className={styles.post__comment} onClick={handleClick}>Comments</div>
+            {showComments && <CommentsList postId={postId}/>}
+        </div>
     )
 }
 
