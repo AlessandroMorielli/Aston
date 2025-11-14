@@ -1,11 +1,10 @@
 import PostCard from "../../entities/post/ui/PostCard/PostCard";
 
-function PostList() {
-    const posts:string[] = ['A', 'B', 'C', 'D', 'E']
+function PostList({posts}) {
 
     return (
         <>
-            {posts.map(item => <PostCard key={item} post={item} />)}
+            {posts.map(item => <PostCard key={item.id} postId={item.id} post={item.title} />)}
         </>
     )
 }
