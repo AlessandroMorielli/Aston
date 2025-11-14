@@ -23,5 +23,10 @@ body {
     grid-template-rows: 48px 1fr 48px;
 }
 
+[data-theme='dark'] {
+    background-color: #1E1E1E;
+    color: #F5F5F5;
+}
+
 
 
