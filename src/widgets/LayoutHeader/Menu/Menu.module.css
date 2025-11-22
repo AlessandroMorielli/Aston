@@ -1,5 +1,6 @@
-ul {
+.menu {
     display: flex;
+    margin-left: 30px;
     gap: 30px;
     flex-direction: row;
     list-style-type: none;
