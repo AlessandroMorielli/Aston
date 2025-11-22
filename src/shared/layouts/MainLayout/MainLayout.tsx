@@ -1,11 +1,10 @@
 import styles from './MainLayout.module.css'
-import PostList from "../../../widgets/PostList/PostList";
+import {Outlet} from 'react-router-dom'
 
 function MainLayout() {
-
     return (
         <main className={styles.main}>
-            <PostList />
+            <Outlet/>
         </main>
     )
 }
