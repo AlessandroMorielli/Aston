@@ -2,15 +2,24 @@ import Header from "../widgets/LayoutHeader/Header";
 import Footer from "../widgets/LayoutFooter/Footer";
 import MainLayout from "../shared/layouts/MainLayout/MainLayout";
 import {ThemeProvider} from "../shared/lib/theme/ThemeProvider/ThemeProvider";
+import {RouterProvider} from 'react-router-dom'
+import {router} from './providers/router/router.tsx'
+import {Provider} from 'react-redux'
+import {store} from "./providers/store/store";
+import {FC} from 'react'
 
-function App() {
+function App():FC {
     return (
         <>
-            <ThemeProvider>
-                <Header/>
-                <MainLayout/>
-                <Footer/>
-            </ThemeProvider>
+            <Provider store={store}>
+                <ThemeProvider>
+                    <RouterProvider router={router}>
+                        <Header/>
+                        <MainLayout/>
+                        <Footer/>
+                    </RouterProvider>
+                </ThemeProvider>
+            </Provider>
         </>
     )
 }

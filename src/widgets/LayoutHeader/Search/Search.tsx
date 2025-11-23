@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import styles from './Search.module.css'
+import {FC} from 'react'
 
-function Search() {
+function Search():FC {
     const [searchValue, setSearchValue] = useState('')
 
-    function handleInput(e):void {
+    function handleInput(e:React.ChangeEvent<HTMLInputElement>):void {
         setSearchValue(() => e.target.value)
     }
 

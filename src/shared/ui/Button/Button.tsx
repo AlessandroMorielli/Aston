@@ -4,8 +4,9 @@ import styles from './Button.module.css'
 
 import {useContext} from "react";
 import {ThemeContext} from "../../lib/theme/ThemeProvider/ThemeProvider";
+import {FC} from 'react'
 
-function Button() {
+function Button():FC {
     const {theme, toggleTheme} = useContext(ThemeContext);
 
     const images = {
