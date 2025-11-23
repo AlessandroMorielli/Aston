@@ -4,8 +4,10 @@ import Menu from "./Menu/Menu";
 import Search from "./Search/Search";
 import User from "./User/User";
 import Button from "../../shared/ui/Button/Button";
+// import Button from "@shared/ui/Button/Button";
+import {FC} from 'react'
 
-function Header() {
+function Header():FC {
     const user: string = 'Guest';
     return (
         <header className={styles.header}>

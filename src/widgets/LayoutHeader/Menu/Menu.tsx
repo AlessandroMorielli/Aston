@@ -1,30 +1,24 @@
 import {useState} from 'react'
+import {NavLink} from 'react-router-dom'
 import styles from "./Menu.module.css";
 import Modal from "../../../shared/ui/Modal/Modal";
+// import Modal from "@shared/ui/Modal/Modal";
+import {FC} from 'react'
 
-function Menu() {
-    const menu: string[] = ['Categories', 'Pages', 'Contact Us', 'About Us'];
-    const [showModal, setShowModal] = useState(false);
+function Menu():FC {
+    const [showModal, setShowModal] = useState<boolean>(false);
 
-    function handleClick() {
+    function handleClick():void {
         setShowModal(!showModal)
     }
 
     return (
         <>
             <nav className={styles.menu}>
-                <ul>
-                    {menu.map((item, index) => {
-                            switch (item) {
-                                case 'About Us':
-                                    return <li key={index} onClick={handleClick}>{item}</li>
-                                default:
-                                    return <li key={index}>{item}</li>
-                            }
-
-                        }
-                    )}
-                </ul>
+                <NavLink to={'/posts'}>Posts</NavLink>
+                <NavLink to={'/users'}>Users</NavLink>
+                <NavLink to={'/albums'}>Albums</NavLink>
+                <li onClick={handleClick}>About us</li>
             </nav>
             {showModal && <Modal onClick={handleClick}/>}
         </>
